@@ -1,5 +1,5 @@
 // Countdown Timer
-const launchDate = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); 
+const launchDate = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000); 
 
 function updateCountdown() {
     const now = new Date().getTime();
@@ -38,12 +38,12 @@ document.getElementById('toggle-arrow').addEventListener('click', function () {
 //form validation
 
 document.getElementById('register-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent form from submitting until validation is complete
+    e.preventDefault(); 
 
     // Validate the form
     if (validateForm()) {
         alert('Thank you for registering! We\'ll contact you when we launch.');
-        this.reset(); // Reset the form if validation is successful
+        this.reset(); 
     }
 });
 
@@ -70,12 +70,12 @@ function validateForm() {
     }
 
     // Validate Phone Number (Optional but validate if entered)
-    const phone = document.getElementById('phone').value;
-    const phoneRegex = /^[0-9]{10}$/; // Adjust regex to fit your phone format
-    if (phone && !phoneRegex.test(phone)) {
-        displayError('phone-error', 'Please enter a valid phone number (10 digits)');
+    const subject = document.getElementById('Subject').value.trim(); // Trim to remove extra spaces
+    if (!subject || subject.length < 3 || subject.length > 100) {
+        displayError('subject-error', 'Please enter a valid subject (3-100 characters)');
         isValid = false;
     }
+
 
     // Validate Message
     const message = document.getElementById('message').value;

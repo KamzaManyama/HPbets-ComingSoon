@@ -28,33 +28,27 @@
     <!--Canonical Link-->
     <link rel="canonical" href="https://www.hpbet.com">
 
-    <!--mobile meta data-->
-    <!-- Modern Web App Capable Meta Tag -->
-    <meta name="mobile-web-app-capable" content="yes">
-    
-    <!-- Additional Best Practices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff"> 
-    <meta name="application-name" content="Your App Name"> 
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Your App Name"> 
-    <meta name="apple-touch-icon" content="path-to-icon.png"> 
-
-    
     <!--iOS Specific Meta Tags (for mobile devices)-->
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="HP Bets">
     <meta name="apple-mobile-web-app-capable" content="yes">
     
     <!--icon image -->
-    <link rel="icon" href="./Assets/Images/logoooo.svg" sizes="32x32">
+    <link rel="icon" href="Assets/Images/logoooo.svg" sizes="32x32">
 
     <title>BetPro - Coming Soon</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./Assets/css/style.css">
+    <link rel="stylesheet" href="Assets/css/style.css">
 </head>
 <body>
     <section class="hero-section">
+
+        <div class="slideshow">
+            <div class="slide" style="background-image: url('./Assets/images/pexels-bohlemedia-1884574.jpg');"></div>
+            <div class="slide" style="background-image: url('./Assets/images/pexels-bohlemedia-1884576.jpg');"></div>
+            <div class="slide" style="background-image: url('./Assets/images/pexels-davidpickup-28172432.jpg');"></div>
+        </div>
+
         <div class="hero-content">
             <div class="logo">
                 <img src="Assets/images/logoooo.svg" alt="logo">
@@ -144,7 +138,7 @@
 
                 <div class="form-section">
                     <h2>Register for Early Access</h2>
-                    <form id="register-form" onsubmit="return validateForm()">
+                    <form id="register-form" onsubmit="return validateForm()" method="post">
                             
                             <div class="form-group">
                                 <label for="name">Full Name</label>
@@ -154,14 +148,14 @@
                     
                             <div class="form-group">
                                 <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" >
+                                <input  id="email" name="email" >
                                 <div class="error-message" id="email-error"></div>
                             </div>
                     
                             <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                                <div class="error-message" id="phone-error"></div>
+                                <label for="phone">Subject</label>
+                                <input type="text" id="Subject" name="Subject">
+                                <div class="error-message" id="subject-error"></div>
                             </div>
                     
                             <div class="form-group">
